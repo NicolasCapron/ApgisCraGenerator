@@ -47,8 +47,8 @@ def add_two_column_slide(prs, title, left_bullets, right_bullets, notes=None):
     try:
         left_tf = slide.shapes.placeholders[1].text_frame
         left_tf.clear()
-        for i,b in enumerate(left_bullets):
-            if i==0:
+        for i, b in enumerate(left_bullets):
+            if i == 0:
                 p = left_tf.paragraphs[0]
                 p.text = b
             else:
@@ -61,8 +61,8 @@ def add_two_column_slide(prs, title, left_bullets, right_bullets, notes=None):
     try:
         right_tf = slide.shapes.placeholders[2].text_frame
         right_tf.clear()
-        for i,b in enumerate(right_bullets):
-            if i==0:
+        for i, b in enumerate(right_bullets):
+            if i == 0:
                 p = right_tf.paragraphs[0]
                 p.text = b
             else:
