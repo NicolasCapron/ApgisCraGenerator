@@ -15,7 +15,7 @@ def add_title_slide(prs, title, subtitle=None):
         try:
             subtitle_tf = slide.placeholders[1]
             subtitle_tf.text = subtitle
-        except:
+        except (KeyError, IndexError):
             pass
     return slide
 
@@ -44,27 +44,33 @@ def add_two_column_slide(prs, title, left_bullets, right_bullets, notes=None):
     slide = prs.slides.add_slide(slide_layout)
     slide.shapes.title.text = title
     # left
-    left_tf = slide.shapes.placeholders[1].text_frame
-    left_tf.clear()
-    for i,b in enumerate(left_bullets):
-        if i==0:
-            p = left_tf.paragraphs[0]
-            p.text = b
-        else:
-            p = left_tf.add_paragraph()
-            p.text = b
-        p.font.size = Pt(16)
+    try:
+        left_tf = slide.shapes.placeholders[1].text_frame
+        left_tf.clear()
+        for i,b in enumerate(left_bullets):
+            if i==0:
+                p = left_tf.paragraphs[0]
+                p.text = b
+            else:
+                p = left_tf.add_paragraph()
+                p.text = b
+            p.font.size = Pt(16)
+    except (KeyError, IndexError):
+        pass  # Layout doesn't support two-column format
     # right
-    right_tf = slide.shapes.placeholders[2].text_frame
-    right_tf.clear()
-    for i,b in enumerate(right_bullets):
-        if i==0:
-            p = right_tf.paragraphs[0]
-            p.text = b
-        else:
-            p = right_tf.add_paragraph()
-            p.text = b
-        p.font.size = Pt(16)
+    try:
+        right_tf = slide.shapes.placeholders[2].text_frame
+        right_tf.clear()
+        for i,b in enumerate(right_bullets):
+            if i==0:
+                p = right_tf.paragraphs[0]
+                p.text = b
+            else:
+                p = right_tf.add_paragraph()
+                p.text = b
+            p.font.size = Pt(16)
+    except (KeyError, IndexError):
+        pass  # Layout doesn't support two-column format
     if notes:
         slide.notes_slide.notes_text_frame.text = notes
     return slide
