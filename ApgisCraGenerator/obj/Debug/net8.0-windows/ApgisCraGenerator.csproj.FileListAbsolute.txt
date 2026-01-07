@@ -1,0 +1,5 @@
+\\Mac\Home\Library\CloudStorage\OneDrive-Personnel\DEV\CodeConverter\ApgisCraGenerator\ApgisCraGenerator\obj\Debug\net8.0-windows\ApgisCraGenerator.csproj.AssemblyReference.cache
+\\Mac\Home\Library\CloudStorage\OneDrive-Personnel\DEV\CodeConverter\ApgisCraGenerator\ApgisCraGenerator\obj\Debug\net8.0-windows\MainWindow.g.cs
+\\Mac\Home\Library\CloudStorage\OneDrive-Personnel\DEV\CodeConverter\ApgisCraGenerator\ApgisCraGenerator\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+\\Mac\Home\Library\CloudStorage\OneDrive-Personnel\DEV\CodeConverter\ApgisCraGenerator\ApgisCraGenerator\obj\Debug\net8.0-windows\ApgisCraGenerator_MarkupCompile.cache
+\\Mac\Home\Library\CloudStorage\OneDrive-Personnel\DEV\CodeConverter\ApgisCraGenerator\ApgisCraGenerator\obj\Debug\net8.0-windows\ApgisCraGenerator_MarkupCompile.lref
